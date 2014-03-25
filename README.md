@@ -1,6 +1,8 @@
 Mello
 =========
-Sending bulk emails and create Trello cards.
+Sending bulk emails and create Trello cards. 
+
+<sup>Built using NodeJS, ExpressJS, MongoDb, EmberJS</sup>
 
 Pre-requisites
 --------------
