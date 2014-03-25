@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local("Roboto Thin"), local("Roboto-Thin"), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/vzIUHo9z-oJ4WgkpPOtg13YhjbSpvc47ee6xR_80Hnw.woff) format("woff");
+}
+
+
+body {
+    background-color: #f2f3f4;
+    color: #424244;
+}
+
+h1, h2, h3, h4, h5, h6 {}
+
+.ember-view .panel-content {
+    background-color: #f9f9fa;
+}
+
+.horizontal-menu {
+    background-color: #ffffff;
+}
+
+.horizontal-menu ul {
+    margin-top: 0;
+}
+
+.product-title {
+    color: #1f8dd6 !important;
+}
+
+form .settings-container {
+    width: 40%;
+    display: inline-table;
+}
+
+form .settings-container textarea {
+    height: 178px !important;
+}
+
+form .subheader-tertiary {
+    margin-bottom: 20px;
+}
+
+.button-email-dropdown {
+    position: absolute;
+    top: 5px;
+    z-index: 2;
+    border: 0;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    min-height: 1px;
+    min-width: 1px;
+    padding: inherit !important;
+    margin: 0;
+    outline: none;
+}
+
+.button-email-dropdown:after {
+    content: '' !important;
+    position: relative !important;
+}
+
+.email-dropdown-menu {
+    right: 0 !important;
+    border-top: none !important;
+}
+
+.metro button.run {
+    background-color: #4390df;
+    color: #fff;
+}
+
+button#email-settings-save {
+    background-color: #4390df;
+    color: white;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.metro .input-control input {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.metro .input-control textarea {
+    border: 1px #d9d9d9 solid;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    z-index: 2;
+    color: rgba(0, 0, 0, 0.6);
+    -webkit-appearance: none;
+}
+
+.metro .input-control textarea:focus,
+.metro .input-control input:focus {
+    color: rgba(0, 0, 0, 1);
+    outline: 0;
+    border-color: #919191;
+}
+
+.metro .listview-outlook .list:hover {
+    background-color: transparent !important;
+    cursor: default;
+}
+
+.metro .listview-outlook .list.marked .list-content {
+    border-left-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.metro .input-control.switch input[type="checkbox"]:checked ~ .check {
+    background: #4390df;
+}
+
+.metro .dropdown-menu li {
+    margin-left: 0px !important;
+}
+
+.metro .dropdown-menu li:hover {
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.metro .listview-outlook .list .list-content .data.inline {
+    margin-left: 0;
+    float: left;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+button.candidate-add {
+    line-height: 36px !important;
+}
+
+.marginL5P {
+    margin-left: 5%;
+}
+
+.app-index .input-control.text {
+    margin-top: 7pt;
+}
+
+.icon.error {
+    background-color: #e51400;
+    color: white;
+    -webkit-animation: none !important;
+}
+
+.icon.success {
+    background-color: #60a917;
+    color: white;
+    -webkit-animation: none !important;
+}
+
+.icon.loading {
+    -webkit-animation: pulse 1s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+    50% {
+        background-color: #f0a30a;
+    }
+}
+
+
+.metro .size2-5 {
+    width: 215px !important;
+}
+
+.hidden {
+    display: none !important;
+}

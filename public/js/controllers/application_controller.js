@@ -1,0 +1,1 @@
+Mello.ApplicationController = Ember.Controller.extend({});

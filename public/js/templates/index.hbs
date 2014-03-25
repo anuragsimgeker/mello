@@ -1,0 +1,97 @@
+<div class="margin15">
+	
+	<div class="panel">
+	    <div class="panel-content">
+	        <form class="app-index">
+	            <fieldset>
+	                <legend>
+	                	<div class="subheader-secondary"><i class="icon-loop on-left"></i>Run Tasks
+		                	<small class="input-control switch text-muted on-right-more" data-role="input-control">
+	                            <label>
+	                                <span class="on-right-more on-left-more"></span>
+	                            </label>
+	                        </small>
+                        </div>
+                	</legend>
+                	<div>
+                		<div class="subheader-tertiary">
+                			<h2 class="fg-gray inline-block">Candidates</h2>
+							<button class="command-button link candidate-add" {{action 'addCandidate'}}>
+								<i class="icon-plus-2"></i>
+							</button>
+            			</div>
+
+            			{{#each this.model}}
+
+	            			{{#if tasksRunning}}
+	            				<div class="listview-outlook">
+		            				<div class="list marked">
+								        <div class="list-content">
+								        	{{#if emailRunning}}
+							        			<i {{bind-attr class=":icon :loading :icon-mail isEmailSuccess:success isEmailError:error"}}></i>
+							        		{{/if}}
+							        		{{#if trelloRunning}}
+							        		<a {{bind-attr href="trelloCardUrl"}} target="_blank">
+								        		<i {{bind-attr class=":icon :loading :icon-tablet isTrelloSuccess:success isTrelloError:error"}}></i>
+							        		</a>
+							        		{{/if}}
+			                                <div class="data inline">
+			                                	<span class="list-title">{{firstName}} {{lastName}}</span>
+				                                <span class="list-subtitle">{{email}}</span>
+				                                <span class="list-remark">Ph: {{phone}} <a href="{{url}}" target="_blank">{{url}}</a></span>
+			                                </div>
+								        </div>
+								    </div>
+		            			</div>
+	            			{{/if}}
+
+	            			{{#unless tasksRunning}}
+	            				<div class="listview-outlook">
+		            				<div class="list marked">
+								        <div class="list-content">
+								        	<div class="input-control text size3 on-left" data-role="input-control">
+							                	{{input value=firstName type="text" placeholder="Firstname"}}
+							                    <button class="btn-clear" tabindex="-1" type="button"></button>
+							                </div>
+							                <div class="input-control text size3 on-left" data-role="input-control">
+							                	{{input value=lastName type="text" placeholder="Lastname"}}
+							                    <button class="btn-clear" tabindex="-1" type="button"></button>
+							                </div>
+
+							                <div class="input-control text size5 on-left" data-role="input-control">
+							                	{{input value=email type="text" placeholder="Email"}}
+							                    <button class="btn-clear" tabindex="-1" type="button"></button>
+							                </div>
+
+							                <div class="input-control text size2-5 on-left" data-role="input-control">
+							                	{{input value=phone type="text" placeholder="Phone"}}
+							                    <button class="btn-clear" tabindex="-1" type="button"></button>
+							                </div>
+
+							                <div class="input-control text size3 on-left" data-role="input-control">
+							                	{{input value=url type="text" placeholder="Url"}}
+							                    <button class="btn-clear" tabindex="-1" type="button"></button>
+							                </div>
+
+						                	<button {{bind-attr class=":link isFirstItem:hidden"}} {{action 'removeCandidate' this}}>
+												<i class="icon-cancel-2"></i>
+											</button>
+								        </div>
+								        
+								    </div>
+		            			</div>
+	            			{{/unless}}
+
+            			{{/each}}
+
+            			<br/>
+	                    <p>
+	                    	<button id="runTasks" class="button run" {{action 'runTasks'}}>Run</button>
+	                    	<button id="resetForm" class="hidden button link" {{action 'resetForm'}}>Reset</button>
+	                    </p>
+                    </div>
+	            </fieldset>
+	        </form>
+	    </div>
+	</div>
+</div>

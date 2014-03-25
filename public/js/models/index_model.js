@@ -1,0 +1,1 @@
+var attr = DS.attr;

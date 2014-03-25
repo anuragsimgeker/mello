@@ -1,0 +1,111 @@
+<div class="margin15">
+	
+	<div class="panel">
+	    <div class="panel-content">
+	        <form class="trello-settings">
+	            <fieldset>
+	                <legend>
+	                	<div class="subheader-secondary"><i class="icon-tablet on-left"></i>Trello Settings
+		                	<small class="input-control switch text-muted on-right-more" data-role="input-control">
+	                            <label>
+	                                |
+	                                <span class="on-right-more on-left-more">{{#if model.enabled}}Enabled{{else}}Disabled{{/if}}</span>
+	                                {{input checked=model.enabled type="checkbox" id="trello-enabled"}}
+	                                <span class="check"></span>
+	                            </label>
+	                        </small>
+                        </div>
+                	</legend>
+                	<div class="settings-container">
+	                	<label for="trello-key">App Key</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.appKey type="text" placeholder="Trello App Key" id="trello-key"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the App Key 
+		                    		<a href="https://trello.com/1/appKey/generate" target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+
+		                {{#if model.appKey}}
+		                <label for="trello-token">App Token</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.appToken type="text" placeholder="Trello App Token" id="trello-token"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the App Token 
+		                    		<a {{bind-attr href='model.appTokenUrl'}} target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+		                {{/if}}
+
+		                {{#if model.appToken}}{{#if model.appKey}}
+		                <label for="trello-boardid">Board ID</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.boardId type="text" placeholder="Trello Board ID" id="trello-boardid"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the Board ID 
+		                    		<a {{bind-attr href='model.appBoardsUrl'}} target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+		                {{/if}}{{/if}}
+
+		                {{#if model.boardId}}{{#if model.appToken}}{{#if model.appKey}}
+		                <label for="trello-listid">List ID</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.listId type="text" placeholder="Trello List ID" id="trello-listid"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the List ID 
+		                    		<a {{bind-attr href='model.appListsUrl'}} target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+		                {{/if}}{{/if}}{{/if}}
+
+		                {{#if model.appToken}}{{#if model.appKey}}
+		                <label for="trello-userid">User ID</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.userId type="text" placeholder="Trello User ID" id="trello-userid"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the User ID 
+		                    		<a {{bind-attr href='model.appUserUrl'}} target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+		                {{/if}}{{/if}}
+
+		                {{#if model.boardId}}{{#if model.appToken}}{{#if model.appKey}}
+		                <label for="trello-labelKey">Label Key</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.labelKey type="text" placeholder="Trello Board Label Key" id="trello-labelKey"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                    <blockquote>
+		                    	<small>Get the Label Key 
+		                    		<a {{bind-attr href='model.appLabelsUrl'}} target="_blank">Here</a>
+		                    	</small>
+							</blockquote>
+		                </div>
+		                <br/><br/>
+		                {{/if}}{{/if}}{{/if}}
+
+	                    <p>
+	                    	<button id="trello-settings-save" class="button info" {{action 'save'}}>Save</button>
+	                    	<!--<button class="button link" type="reset">Reset</button>-->
+	                    </p>
+                    </div>
+	            </fieldset>
+	        </form>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,75 @@
+<div class="margin15">
+	
+	<div class="panel">
+	    <div class="panel-content">
+	        <form class="email-settings">
+	            <fieldset>
+	                <legend>
+	                	<div class="subheader-secondary"><i class="icon-mail on-left"></i>Email Settings
+		                	<small class="input-control switch text-muted on-right-more" data-role="input-control">
+	                            <label>
+	                                |
+	                                <span class="on-right-more on-left-more">{{#if model.enabled}}Enabled{{else}}Disabled{{/if}}</span>
+	                                {{input checked=model.enabled type="checkbox" id="email-enabled"}}
+	                                <span class="check"></span>
+	                            </label>
+	                        </small>
+                        </div>
+                	</legend>
+                	<div class="settings-container">
+                		<div class="subheader-tertiary"><h2 class="fg-gray">Account</h2></div>
+		                
+		                <label for="email-host">SMTP Host</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.host type="text" placeholder="SMTP email server hostname" id="email-host"}}
+			                    <button class="button-email-dropdown icon-pencil link dropdown-toggle" tabindex="-1" type="button"></button>
+			                    <ul class="email-dropdown-menu dropdown-menu place-right" data-role="dropdown">
+									<li><a {{action 'setEmailHostYahoo'}} href="#">Yahoo</a></li>
+									<li><a {{action 'setEmailHostGmail'}} href="#">GMail</a></li>
+								</ul>
+		                </div>
+		                <label for="email-port">SMTP Port</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.port type="text" placeholder="SMTP email server port" id="email-port"}}
+		                    	<button class="button-email-dropdown icon-pencil link dropdown-toggle" tabindex="-1" type="button"></button>
+			                    <ul class="email-dropdown-menu dropdown-menu place-right" data-role="dropdown">
+									<li><a {{action 'setEmailPortYahoo'}} href="#">Yahoo</a></li>
+									<li><a {{action 'setEmailPortGmail'}} href="#">GMail</a></li>
+								</ul>
+		                </div>
+		                <label for="email-email">Email</label>
+		                <div class="input-control text" data-role="input-control">
+		                	{{input value=model.email type="text" placeholder="Full email address" id="email-email"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                </div>
+		                <label for="email-password">Password</label>
+		                <div class="input-control password" data-role="input-control">
+		                    {{input value=model.password type="password" placeholder="type password" autofocus="" id="email-password"}}
+		                    <button class="btn-reveal" tabindex="-1" type="button"></button>
+		                </div>
+                    </div>
+
+                    <div class="settings-container marginL5P">
+                		<div class="subheader-tertiary"><h2 class="fg-gray">Template</h2></div>
+		                <label for="email-subject">Subject</label>
+		                <div class="input-control text" data-role="input-control">
+		                    {{input value=model.subject type="text" placeholder="Email Subject" id="email-subject"}}
+		                    <button class="btn-clear" tabindex="-1" type="button"></button>
+		                </div>
+		                <label for="email-body">Body Template</label>
+		                <div class="input-control textarea" data-role="input-control">
+		                    {{textarea value=model.body type="text" placeholder="Email Body" id="email-body" }}
+		                </div>
+                    </div>
+
+
+	                <br/><br/>
+                    <p>
+                    	<button id="email-settings-save" class="button" {{action 'save'}}>Save</button>
+                    	<!--<button class="button link" type="reset">Reset</button>-->
+                    </p>
+	            </fieldset>
+	        </form>
+	    </div>
+	</div>
+</div>
