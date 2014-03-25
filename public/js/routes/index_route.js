@@ -4,11 +4,11 @@ Mello.IndexRoute = Ember.Route.extend({
 
         candidates.push({
             id: 1,
-            firstName: 'Anurag',
-            lastName: 'Simgeker',
-            email: 'anuragsimgeker@gmail.com',
-            phone: '123',
-            url: 'http://',
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            url: '',
             isFirstItem: true
         });
 

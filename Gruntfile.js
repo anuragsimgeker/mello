@@ -106,10 +106,10 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'shell:mongo',
+        // 'shell:mongo',
         'emberTemplates',
         'express',
-        // 'open',
+        'open',
         'watch'
     ]);
 

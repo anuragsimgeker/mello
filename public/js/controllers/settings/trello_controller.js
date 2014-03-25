@@ -5,14 +5,6 @@ Mello.SettingsTrelloController = Ember.Controller.extend({
             saveButton.text('Saving..').attr('disabled', true);
             this.get('model').save().then(function() {
                 saveButton.text('Save').attr('disabled', false);
-                $.Notify({
-                    caption: 'Success',
-                    content: 'Trello settings saved.',
-                    style: {
-                        background: 'green',
-                        color: 'white'
-                    }
-                });
             }, function() {
                 saveButton.text('Save').attr('disabled', false);
             });

@@ -70,6 +70,7 @@ exports.setSettings = function(req, res) {
             upsert: true
         }, function(err, result) {
             if (!err) {
+                tSettings = req.body.trello;
                 t = new Trello(req.body.trello.appKey, req.body.trello.appToken);
             }
             res.send(err || (result === 1 ? 200 : 500));
