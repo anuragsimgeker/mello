@@ -34,7 +34,7 @@ exports.send = function(req, res) {
                     host: host,
                     port: port,
                     auth: {
-                        user: fromEmail,
+                        user: fromEmail.split('@')[0],
                         pass: password
                     }
                 });
